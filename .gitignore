@@ -1,0 +1,5 @@
+Video/*.mp4
+node_modules/
+test.json
+Artwork/logo*png
+Artwork/*.ico

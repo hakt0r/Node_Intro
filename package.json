@@ -1,0 +1,29 @@
+{
+  "name": "node_intro",
+  "version": "3.0.0",
+  "description": "Introduction into NodeJS for FbW14",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hakt0r/Node_Intro.git"
+  },
+  "keywords": [
+    "nodejs",
+    "intro",
+    "basics",
+    "fbw14dus"
+  ],
+  "author": "anx <anx@hktr.de>",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/hakt0r/Node_Intro/issues"
+  },
+  "homepage": "https://github.com/hakt0r/Node_Intro#readme",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "http-server": "^0.12.3"
+  }
+}
