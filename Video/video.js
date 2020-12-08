@@ -2,16 +2,12 @@
 const cp = require('child_process');
 const fs = require('fs');
 
-function splitVideo (filename) {
-    // `ffmpeg -i ${} -ss ${} -t ${} -c copy ${}.p${}.mp4`
-}
-
 const [ ,, command, ...args ] = process.argv;
 
-console.log(process.argv)
 let name;
 switch ( command ){
     case 'record':
+        cp.execSync(`xrandr --output eDP-1 --mode 1680x1050`);
         [ name ] = args; 
         cp.spawn('ffmpeg',['-y','-video_size','1680x1050','-framerate',25,
         '-f','x11grab','-i',':0','-f','pulse', '-ac', 2, '-i', 'default',

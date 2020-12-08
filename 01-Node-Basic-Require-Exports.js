@@ -16,8 +16,8 @@ console.log('lib.js exported:', require('./lib') );
 // module exports can be userd locally
 
 const { mod } = require('./lib');
-// == const mod = require('./lib).mod;
-// or const lib = require('./lib)],
+// == const mod = require('./lib').mod;
+// or const lib = require('./lib'),
 //          mod = lib.mod;
 
 // mod is an exported function, so i can call it
