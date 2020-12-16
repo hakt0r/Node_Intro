@@ -4,12 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "nodemon tests.js"
+    "test": "node --delay 0.2 tests.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "axios": "^0.21.0",
+    "colors": "^1.4.0",
     "express": "^4.17.1",
     "level": "^6.0.1",
     "request": "^2.88.2"

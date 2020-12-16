@@ -24,6 +24,7 @@
   "homepage": "https://github.com/hakt0r/Node_Intro#readme",
   "dependencies": {
     "colors": "^1.4.0",
-    "http-server": "^0.12.3"
+    "http-server": "^0.12.3",
+    "isomorphic-fetch": "^3.0.0"
   }
 }

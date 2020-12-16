@@ -1,3 +1,4 @@
+
 const express = require('express');
 const     app = express();
 
@@ -9,7 +10,7 @@ app.use( express.static('public') );
 app.get( '/hello.html', (req,res)=> {
   // req.params ( /user/:userId )
   // req.body   ( json-body of the incoming request )
-  // req.query  ( url query parameters )
+  // req.query  ( url query parameters ?user=anx )
   res.send(`
   <html>
     <head><title>Hello Node!</title></head>
