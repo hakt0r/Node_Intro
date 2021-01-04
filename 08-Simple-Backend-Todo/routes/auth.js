@@ -14,8 +14,9 @@ router.post( '/register', async (req,res) => {
   // if we can actually get a user with this id,
   // it means that the userId is already taken
   try {
-    await userDB.get(id);
-    return res.status(401).send('Not Authorized');
+    if ( await userDB.get(id) ){
+      return res.status(401).send('Not Authorized');
+    }
   } catch ( error ){}
   // create user
   const user = {

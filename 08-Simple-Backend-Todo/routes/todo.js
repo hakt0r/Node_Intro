@@ -11,7 +11,8 @@ router.get( '/', async ({user},res)=> {
   res.send(user.todos);
 });
 
-router.post( '/', async ({body,user},res)=> {
+router.post( '/', async (req,res)=> {
+  const { body, user } = req;
   const { text = "", date = Date.now(), status = false } = body;
   const todo = { text, date, status, id: Date.now() };
   user.todos.push( todo );
