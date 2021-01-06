@@ -1,7 +1,4 @@
 
-const cp = require('child_process');
-cp.execSync('rm -rf users');
-
 const express = require('express');
 const app = express();
 

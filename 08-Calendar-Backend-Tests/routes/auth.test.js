@@ -3,6 +3,19 @@
  * @jest-environment node
  */
 
+let backendProcess = null;
+
+beforeAll( async () => {
+  // const cp = require('child_process');
+  // cp.execSync('rm -rf users event');
+  // backendProcess = cp.exec('exec yarn dev');
+  // cp.execSync('sleep 1');
+});
+
+afterAll( async () => {
+  // backendProcess.kill("SIGHUP");
+});
+
 const axios = require('axios');
 axios.defaults.baseURL = 'http://127.0.0.1:5000/';
 
