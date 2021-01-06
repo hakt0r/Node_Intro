@@ -10,21 +10,11 @@ function register ( id, password ){
   return axios.post('/register',{ id, password });
 }
 
-let backendProcess = null;
-
 beforeAll( async () => {
-  //const cp = require('child_process');
-  //cp.execSync('rm -rf users event');
-  //backendProcess = cp.exec('exec yarn dev');
-  //cp.execSync('sleep 1');
-
   const res = await register('event-test-user','dasp98a7sd98as7');
   axios.defaults.headers.common.authorization = res.data.token;
 });
 
-afterAll( async () => {
-  //backendProcess.kill("SIGHUP");
-});
 
 function create ( event = {} ){
   return axios.post('/event/', event );
