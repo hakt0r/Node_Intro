@@ -3,7 +3,7 @@
   Installing jest
 
   ```ShellScript
-    npm install --save dev jest
+    npm install --save-dev jest
   ```
 
 Seems like we just need two Databases,

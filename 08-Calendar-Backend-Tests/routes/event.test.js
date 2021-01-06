@@ -15,7 +15,6 @@ beforeAll( async () => {
   axios.defaults.headers.common.authorization = res.data.token;
 });
 
-
 function create ( event = {} ){
   return axios.post('/event/', event );
 }
