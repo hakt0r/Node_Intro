@@ -84,9 +84,7 @@ router.patch('/:eventId', async (req, res) => {
   if ( ! event ) return res.status(404).send('not found');
 
   if (
-    event.public ||
-    event.owners.includes(req.user._id) ||
-    event.participants.includes(req.user._id)
+    event.owners.includes(req.user._id)
   ) {
     // OUCH!!!
     // res.status(200).send(event);
@@ -111,7 +109,6 @@ router.patch('/:eventId', async (req, res) => {
     priority, repeat
   });
 
-  let result;
   try {
     await event.save();
   } catch (e){
