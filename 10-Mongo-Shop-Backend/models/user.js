@@ -1,46 +1,51 @@
 const mongoose = require("mongoose");
 
 const userSchema = new mongoose.Schema({
-    "Email": {
+    email: {
         required: true,
         unique: true,
         type: String
     },
-    "Password": {
+    password: {
         required: true,
         type: String,
     },
-    "token": {
+    token: {
         index: true,
         type: String
     },
-    "First Name": {
+    firstName: {
         required: true,
         type: String,
     },
-    "Last Name": {
+    lastName: {
         required: true,
         type: String,
     },
-    "Mobile Phone Number": String,
-    "Two-Step Verification": Boolean,
-    "Saved Delivery Addresses": [{
-        "Country": {
+    role: {
+        type: String,
+        enum: ['owner','accounting','logistics','user'],
+        default: 'user'
+    },
+    mobilePhoneNumber: String,
+    twoStepVerification: Boolean,
+    savedDeliveryAddresses: [{
+        country: {
             type: String,
             enum: ["Albania", "Andorra", "Austria", "Belarus", "Belgium", "Bosnia and Herzegovina", "Bulgaria", "Croatia", "Cyprus", "Czechia", "Denmark", "Estonia", "Finland", "France", "Germany"],
             default: "Germany"
         },
-        "Address line 1": String,
-        "Address line 2": String,
-        "City": String,
-        "Postcode": Number
+        address1: String,
+        address2: String,
+        city: String,
+        postcode: Number
     }],
-    "Saved Payment Methods": [{}],
-    "Saved Items": [{
+    savedPaymentMethods: [{}],
+    savedItems: [{
         type: mongoose.Schema.Types.ObjectId,
         ref: "Item"
     }],
-    "Orders History": [{
+    ordersHistory: [{
         type: mongoose.Schema.Types.ObjectId,
         ref: "Order"
     }]
